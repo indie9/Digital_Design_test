@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Николай Галанов тестовое задание</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://use.fontawesome.com/fdc78eac1c.js"></script>
+</head>	
+<body>
+   
+        <div class="container">
+           
+           
+            <div class="bg1">
+                <div class="menu_icon">
+					<img src="../test/img/Frame.svg" alt="" id="nav_logo_mobile">
+					<div class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+                <nav class="navbar">		
+                        <a class="nav-link" href="#base_css">Основы CSS</a>
+                        <a class="nav-link" href="#what_is">Так что же такое CSS?</a>
+                        <a class="nav-link" href="#anatomy">Анатомия набора правил CSS</a>	
+                        <a class="nav-link" href="#test_task">Тестовое задание №2</a>
+                        
+                    
+                </nav>
+            </div>
+           
+
+            <div class="info">
+                <p href="#"><i class="fa fa-info-circle"></i>  Наполнение данного сайта
+                     я взял с <a href="https://developer.mozilla.org/ru/" target="_blank"> руководства от MOZILLA</a></p>
+                <p href="#"><i class="fa fa-info-circle"></i>  У меня уже есть схожие тестовые 
+                    работы их можно посмотреть <a href="https://codepen.io/Indie777" target="_blank"> тут.</a></p>
+            </div>
+            <navbar class="toc">
+                <h2>Содержание:</h2>
+                <ol>
+                  <li><a href="#base_css">Основы CSS</a>
+                  <li><a href="#what_is">Так что же такое CSS?</a>
+                  <li><a href="#anatomy">Анатомия набора правил CSS</a>
+                    <ol>
+                      <li><a href="#Selector">Селектор (Selector)</a>
+                      <li><a href="#Declaration">Объявление (Declaration)</a>
+                      <li><a href="#Properties">Свойства (Properties)</a>
+                      <li><a href="#Property">Значение свойства (Property value)</a>
+                      <li><a href="#several">Выбор нескольких элементов</a>
+                      <li><a href="#diferent">Разные типы селекторов</a>
+                    </ol>  
+                    <li><a href="#test_task">Тестовое задание №2</a>
+              </navbar>
+            <a class="back_to_top" title="Наверх">Наверх ↑</a>
+            <h1 id="base_css">Основы CSS</h1>
+            <p>CSS (Cascading Style Sheets) — это код, который вы используете для стилизации вашей 
+                веб-страницы. <span class="ital">Основы CSS </span>помогут вам понять, что вам нужно для начала работы.
+                 Мы ответим на такие вопросы как: Как сделать мой текст черным или красным? 
+                 Как сделать так, чтобы контент появлялся в определённом месте на экране? 
+                 Как украсить мою веб-страницу с помощью фоновых изображений и цветов?</p>
+            <h2 id="what_is">Так что же такое CSS? </h2>
+            <p>Как и HTML, CSS на самом деле не является языком программирования.
+                 Это не язык разметки - это <span class="ital">язык таблицы стилей.</span>  
+                 то означает, что он позволяет применять стили выборочно к элементам в документах HTML. 
+                 Например, чтобы выбрать <span class="bold">все</span> элементы абзаца на HTML странице и изменить 
+                 текст внутри них с чёрного на красный, вы должны написать этот CSS:</p>
+            <code>p {</br>
+                &nbsp color: red;</br>
+                  }
+            </code>
+               
+            <p>Давайте попробуем: вставьте эти три строки CSS в новый файл в ваш текстовый редактор, 
+                а затем сохраните файл как  <span class="file_in_text"> style.css</span> в вашей папке 
+                 <span class="file_in_text">  styles.</span></p>
+            <p>Но нам всё равно нужно применить CSS к нашему HTML документу. 
+                В противном случае, CSS стиль не повлияет на то, как ваш браузер отобразит HTML документ.
+                 (Если вы не следили за нашим проектом, то прочитайте раздел <a href="">Работа с файлами</a>
+                  и <a href="">Основы HTML</a> , 
+                 чтобы узнать, что вам нужно сделать в первую очередь.)</p>
+            <ol>
+                <li>Откройте ваш файл  <span class="file_in_text">index.html</span> и вставьте следующую строку куда-нибудь в шапку, 
+                    между  <span class="file_in_text">&lt;head&gt</span> и
+                     <span class="file_in_text"> &lt;/head&gt </span>тегами:</li>
+
+                    <code class="code">&lt;link href="styles/style.css" rel="stylesheet" type="text/css"></code>
+
+                <li>Сохраните <span class="file_in_text">index.html </span> и загрузите его в вашем браузере. Вы должны увидеть что-то вроде этого:</li>
+            </ol>
+            <figure>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png">
+            <figcaption>Пример работы CSS</figcaption>
+            </figure>
+            <p>Если текст вашего абзаца теперь красный, примите наши поздравления! 
+                Вы написали свой первый успешный CSS!</p>
+            <h2 id="anatomy">Анатомия набора правил CSS</h2>
+            <p>Давайте взглянем на вышеупомянутый CSS немного более подробно:</p>
+            <figure>
+            <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" alt="">
+            <figcaption>Пример работы CSS</figcaption>
+            </figure>
+            <p>Вся структура называется <span class="bold"> набором правил</span> (но зачастую для краткости "правило"). 
+                Отметим также имена отдельных частей:</p>
+            <ul>
+                <li>
+                    <h3 id="Selector">Селектор (Selector)</h3>
+                    Имя HTML-элемента в начале набора правил.
+                     Он выбирает элемент(ы) для применения стиля 
+                     (в данном случае, элементы <span class="file_in_text"> p </span>).
+                     Для стилизации другого элемента, просто измените селектор.
+                </li>
+                <li>
+                    <h3 id="Declaration">Объявление (Declaration)</h3>
+                    Единственное правило, например <span class="file_in_text">color: red</span>;
+                     указывает, какие из свойств элемента вы хотите стилизовать.
+                </li>
+                <li>
+                    <h3 id="Properties">Свойства (Properties)</h3>
+                    Способы, которыми вы можете стилизовать определённый HTML-элемент 
+                    (в данном случае, <span class="file_in_text">color</span> является 
+                    свойством для элементов <span class="file_in_text"> &lt;p&gt</span>).
+                    В CSS вы выбираете, какие свойства вы хотите затронуть в вашем правиле.
+                </li>
+                <li>
+                    <h3 id="Property">Значение свойства (Property value)</h3>
+                    Справа от свойства, после двоеточия, у нас есть значение свойства, 
+                    которое выбирает одно из множества возможных признаков для данного свойства 
+                    (существует множество значений <span class="file_in_text"> color</span>,
+                     помимо <span class="file_in_text">red</span>).
+            </ul>
+            <p>Обратите внимание на важные части синтаксиса:</p>
+                <ul>
+                    <li>Каждый набор правил (кроме селектора) должен быть обёрнут в фигурные скобки (<span class="file_in_text">{}</span>).</li>
+                    <li>В каждом объявлении необходимо использовать двоеточие (<span class="file_in_text">:</span>), чтобы отделить свойство от его значений.</li>
+                    <li>В каждом наборе правил вы должны использовать точку с запятой (<span class="file_in_text">;</span>), чтобы отделить каждое объявление от следующего.</li>
+                </ul>
+            <p>Таким образом, чтобы изменить несколько значений свойств сразу, 
+                вам просто нужно написать их, разделяя точкой с запятой, например так:</p>
+            <code>p {</br>
+                &nbsp color: red;</br>
+                &nbsp width: 500px;</br>
+                &nbsp border: 1px solid black;</br>
+              }
+            </code>
+            <h2 id="several">Выбор нескольких элементов</h2>
+            <p>Вы также можете выбрать несколько элементов разного типа и 
+                применить единый набор правил для всех из них. 
+                Добавьте несколько селекторов, разделённых запятыми. Например:</p>
+            <code>p,li,h1 {</br>
+                &nbsp color: red;</br>
+                  }
+            </code>
+            <h2 id="diferent">Разные типы селекторов</h2>
+            <p>Существует множество различных типов селектора.
+                 Выше мы рассматривали только селектор элементов, который выбирает все элементы определённого 
+                 типа в HTML документе. Но мы можем сделать выбор более конкретным. 
+                Вот некоторые из наиболее распространённых типов селекторов:</p>
+            <table>
+                <tr>
+                    <td>Имя селектора</td>
+                    <td>Что выбирает</td>
+                    <td>Пример</td>
+                </tr>
+                <tr>
+                    <td>Селектор элемента (иногда называемый селектором тега или типа)</td>
+                    <td>Все HTML-элемент(ы) указанного типа.</td>
+                    <td><span class="file_in_text">p</span></br>
+                        Выбирает <span class="file_in_text">&lt;p&gt</span></td>
+                </tr>
+                <tr>
+                    <td>ID селектор</td>
+                    <td>Элемент на странице с указанным ID на данной HTML. Лучше всего использовать один элемент
+                         для каждого ID (и конечно один ID для каждого элемента),
+                         даже если вам разрешено использовать один и тот же ID для нескольких элементов.</td>
+                    <td><span class="file_in_text">#my-id</span></br>
+                        Выбирает  <span class="file_in_text"> &lt;p id="my-id"></span> или  <span class="file_in_text">&lt;a id="my-id"></span></td>
+                </tr>
+                <tr>
+                    <td>Селектор класса</td>
+                    <td>Элемент(ы) на странице с указанным классом (множество экземпляров класса может объявляться на странице).</td>
+                    <td><span class="file_in_text">.my-class</span></br>
+                        Выбирает <span class="file_in_text"> &lt;p class="my-class"></span>
+                         и  <span class="file_in_text">&lt;a class="my-class"></span></td>
+                </tr>
+                <tr>
+                    <td>Селектор атрибута</td>
+                    <td>Элемент(ы) на странице с указанным атрибутом.</td>
+                    <td><span class="file_in_text">img[src]</span></br>
+                        Выбирает <span class="file_in_text">&lt;img src="myimage.png"></span> но не <span class="file_in_text">&lt;img></span></td>
+                </tr>
+                <tr>
+                    <td>Селектор псевдокласса</td>
+                    <td>Указанные элемент(ы), но только в случае определённого состояния, например, при наведении курсора.</td>
+                    <td><span class="file_in_text">a:hover</span></br>
+                        Выбирает <span class="file_in_text">&lt;a></span>, но только тогда, когда указатель мыши наведён на ссылку</td>
+                </tr>
+            </table>
+            <p>Существует ещё много селекторов для изучения, 
+                и вы можете найти более подробный список в нашем <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors" target="_blank">Pуководстве селекторов (en-US).</a></p>
+
+            <h2 id="test_task">ТЕСТОВОЕ ЗАДАНИЕ №2</h2>
+                <div class="test_container">
+                    <input id="input_date" placeholder="Введите дату в формате DD.MM.YYYY">
+                    <button onclick="getDayInfo2()">Получить информацию</button>
+                    <div id="output_date"> </div>
+                </div>
+                
+    <footer>
+    </footer>
+</body>
+<script src="script.js" ></script>
+</body>
+</html>
